@@ -1,0 +1,17 @@
+.button {
+    margin-left: 19px;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background-color: $main-color;
+    width: 160px;
+    height: 45px;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    &:hover {
+        box-shadow: 0px 0px 7px black;
+        transition: 0.3s;
+    }
+}

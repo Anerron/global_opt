@@ -1,1 +1,11 @@
-$main-color: #ec644b;
+@mixin after_line {
+    &:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 148px;
+        height: 1px;
+        background-color: $main-color;
+    }
+}

@@ -8,7 +8,7 @@
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -18,3 +18,5 @@
 @import 'blocks/advantages/advantages__media.scss';
 @import 'blocks/work/work.scss';
 @import 'blocks/work/work__media.scss';
+@import 'blocks/agent/agent.scss';
+@import 'blocks/agent/agent__media.scss';

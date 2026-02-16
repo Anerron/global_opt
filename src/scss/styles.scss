@@ -2,6 +2,7 @@
 @import 'blocks/base/variables.scss';
 @import 'blocks/base/mixins.scss';
 @import 'blocks/base/button.scss';
+@import 'blocks/base/title.scss';
 
 * {
     font-family: "Roboto";
@@ -20,3 +21,6 @@
 @import 'blocks/work/work__media.scss';
 @import 'blocks/agent/agent.scss';
 @import 'blocks/agent/agent__media.scss';
+@import 'blocks/variants/variants.scss';
+@import 'blocks/variants/variants__media.scss'; 
+

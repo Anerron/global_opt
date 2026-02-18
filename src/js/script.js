@@ -1,7 +1,7 @@
-const overlay = document.querySelector('.header__overlay')
-        hamburger = document.querySelector('.header__hamburger')
-        menu = document.querySelector('.header__menu_mobile')
-        menuClose = document.querySelector('.header__menu__close');
+const overlay = document.querySelector('.header__overlay'),
+      hamburger = document.querySelector('.header__hamburger'),
+      menu = document.querySelector('.header__menu_mobile'),
+      menuClose = document.querySelector('.header__menu__close');
 
 hamburger.addEventListener('click', () => {
     overlay.classList.add('active');
@@ -35,3 +35,16 @@ function validateForms(form){
 }
 
 validateForms('#variants-form');
+
+$(document).ready(function(){
+  $('.reviews__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '50px',
+    infinite: true,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="imgs/reviews/previous.png" alt="arrow-left"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="imgs/reviews/next.png" alt="arrow-right"></button>',
+  });
+});

@@ -41,10 +41,24 @@ $(document).ready(function(){
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: '50px',
+    centerPadding: '30px',
     infinite: true,
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"><img src="imgs/reviews/previous.png" alt="arrow-left"></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="imgs/reviews/next.png" alt="arrow-right"></button>',
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                centerPadding: '10px',
+            }
+        },
+        {
+            breakpoint: 567,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+    ]
   });
 });

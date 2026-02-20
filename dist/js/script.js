@@ -18,6 +18,7 @@ function validateForms(form){
         rules: {
         name: "required",
         phone: "required",
+        text: "required",
         email: {
             required: true,
             email: true
@@ -26,6 +27,7 @@ function validateForms(form){
         messages: {
         name: "Пожалуйста, введите своё имя",
         phone: "Пожалуйста, введите номер телефона",
+        text: "Пожалуйста, введите сообщение",
         email: {
             required: "Пожалуйста, введите почту",
             email: "Неправильно введён адрес почты"
@@ -35,6 +37,7 @@ function validateForms(form){
 }
 
 validateForms('#variants-form');
+validateForms('#questions-form')
 
 $(document).ready(function(){
   $('.reviews__slider').slick({

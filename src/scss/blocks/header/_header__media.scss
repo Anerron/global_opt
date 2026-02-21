@@ -61,11 +61,11 @@
 
         &__hamburger {
             display: block;
-            position: absolute;
+            position: fixed;
             height: 25px;
             width: 30px;
             top: 53px;
-            right: 0;
+            right: 30px;
             span {
                 display: block;
                 max-width: 100%;

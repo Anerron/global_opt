@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -324,15 +324,15 @@
                 <div class="variants__img_consultation">
                     <img src="imgs/variants/support.png" alt="">
                 </div>
-                <form id="variants-form" action="" class="variants__form">
+                <form id="variants-form" class="variants__form">
                     <div class="variants__input variants__input_first">
-                        <input required name="name" id="name" type="text" placeholder="Ваше имя...">
+                        <input required name="name" type="text" placeholder="Ваше имя...">
                     </div>
                     <div class="variants__input variants__input_second">
-                        <input required name="phone" id="phone" type="tel" placeholder="Ваш номер телефона...">
+                        <input required name="phone" type="tel" placeholder="Ваш номер телефона...">
                     </div>
                     <div class="variants__input variants__input_third">
-                        <input required name="email" id="email" type="email" placeholder="Ваш e-mail...">
+                        <input required name="email" type="email" placeholder="Ваш e-mail...">
                     </div>
                 </form>
                 <div class="variants__button__wrapper">
@@ -342,18 +342,18 @@
         </div>
     </section>
 
-    <section class="managers wow animate__animated animate__fadeInUp">
+    <div class="managers wow animate__animated animate__fadeInUp">
         <div class="container">
             <img src="imgs/managers/dialogue.png" alt="" class="managers__img">
             <h2 class="managers__title">Менеджеры компании</h2>
             <div class="managers__subtitle">Подберут для Вас оптимальную схему грузоперевозки. Проведут контроль закупок, организуют прямые <br>
             поставки от завода-изготовителя.</div>
         </div>
-    </section>
+    </div>
 
     <section class="schemes wow animate__animated animate__fadeInUp" id="schemes">
         <div class="container">
-            <div class="schemes__title">Схема работы с нами</div>
+            <h2 class="schemes__title">Схема работы с нами</h2>
             <div class="schemes__grid">
                 <div class="schemes__grid__row">
                     <div class="schemes__grid-item">
@@ -450,34 +450,34 @@
         </div>
     </section>
 
-    <section class="questions wow animate__animated animate__fadeInUp">
+    <div class="questions wow animate__animated animate__fadeInUp">
         <div class="container">
             <div class="questions__wrapper">    
                 <div class="questions__header">
                     <div class="questions__title">Остались вопросы?</div>
                     <div class="questions__subtitle">Напишите нам!</div>
                 </div>
-                <form id="questions-form" action="" class="questions__form">
+                <form id="questions-form" class="questions__form">
                     <div class="questions__input questions__input_name">
-                        <input required name="name" id="name" type="text" placeholder="Ваше имя...">
+                        <input required name="name" type="text" placeholder="Ваше имя...">
                     </div>
                     <div class="questions__input questions__input_phone">
-                        <input required name="phone" id="phone" type="tel" placeholder="Ваш номер телефона...">
+                        <input required name="phone" type="tel" placeholder="Ваш номер телефона...">
                     </div>
                     <div class="questions__input questions__input_email">
-                        <input required name="email" id="email" type="email" placeholder="Ваш e-mail...">
+                        <input required name="email" type="email" placeholder="Ваш e-mail...">
                     </div> 
                     <div class="questions__input questions__input_text">
-                        <textarea name="text" id="text" placeholder="Сообщение..."></textarea>
+                        <textarea name="text" placeholder="Сообщение..."></textarea>
                     </div>   
                     <button class="button questions__button">Отправить заявку</button>              
                 </form>        
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="map__wrapper wow animate__animated animate__fadeInUp">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afd3b6136cf406f52bbbfe6972c9a9d8eefe654cb57aab14bba312fe94794512e&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afd3b6136cf406f52bbbfe6972c9a9d8eefe654cb57aab14bba312fe94794512e&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
 
     <footer class="footer wow animate__animated animate__fadeInUp" id="footer">
@@ -494,14 +494,15 @@
                     </div>
                 </div>
                 <button class="button footer__call">Перезвоните мне</button>
-        </div>
-        <hr>
-        <div class="footer__flex_bottom">
-            <div class="footer__scratch">© 2010 Scratch.com.ua</div>
-            <a class="footer__policy" href="policy.html">Политика конфиденциальности</a>
-            <div class="footer__site">
-                <div class="footer__create-site">Создание сайта:</div>
-                <img src="imgs/footer/logo_site.png" alt="">
+            </div>
+            <hr>
+            <div class="footer__flex_bottom">
+                <div class="footer__scratch">© 2010 Scratch.com.ua</div>
+                <a class="footer__policy" href="policy.html">Политика конфиденциальности</a>
+                <div class="footer__site">
+                    <div class="footer__create-site">Создание сайта:</div>
+                    <img src="imgs/footer/logo_site.png" alt="">
+                </div>
             </div>
         </div>
     </footer>

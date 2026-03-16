@@ -24,7 +24,7 @@ modalButtons.forEach(function(item, i) {
                 modalChecked.classList.add('modal__checked_active');
                 modalCheckedClose.addEventListener('click', function () {
                     overlay.classList.remove('active');
-                    modalChecked.classList.remove('modal__checked_active');
+                    modalChecked.classList.remove('modal__checked_active'); //comment
                 });
             };
         });

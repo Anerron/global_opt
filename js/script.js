@@ -1,7 +1,21 @@
 const overlay = document.querySelector('.header__overlay'),
       hamburger = document.querySelector('.header__hamburger'),
       menu = document.querySelector('.header__menu_mobile'),
-      menuClose = document.querySelector('.header__menu__close');
+      menuClose = document.querySelector('.header__menu__close'),
+      modalButtons = document.querySelectorAll('.open__modal'),
+      modalWindow = document.querySelector('.modal'),
+      modalClose = document.querySelector('.modal__close')
+
+modalButtons.forEach(function(item, i) {
+    modalButtons[i].addEventListener('click', function () {
+        overlay.classList.add('active');
+        modalWindow.classList.add('modal_active');
+        modalClose.addEventListener('click', function() {
+            overlay.classList.remove('active');
+            modalWindow.classList.remove('modal_active');
+        })
+    })
+});
 
 hamburger.addEventListener('click', () => {
     overlay.classList.add('active');
@@ -37,7 +51,8 @@ function validateForms(form){
 }
 
 validateForms('#variants-form');
-validateForms('#questions-form')
+validateForms('#questions-form');
+validateForms('#modal-form');
 
 $(document).ready(function(){
   $('.reviews__slider').slick({

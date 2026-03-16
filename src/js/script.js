@@ -19,14 +19,16 @@ modalButtons.forEach(function(item, i) {
         });
         modalForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            modalWindow.classList.remove('modal_active');
-            modalChecked.classList.add('modal__checked_active');
-            modalCheckedClose.addEventListener('click', function () {
-                overlay.classList.remove('active');
-                modalChecked.classList.remove('modal__checked_active');
-            })
-        })
-    })
+            if (modalForm.checkValidity()) {
+                modalWindow.classList.remove('modal_active');
+                modalChecked.classList.add('modal__checked_active');
+                modalCheckedClose.addEventListener('click', function () {
+                    overlay.classList.remove('active');
+                    modalChecked.classList.remove('modal__checked_active');
+                });
+            };
+        });
+    });
 });
 
 

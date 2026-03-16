@@ -160,6 +160,7 @@
     }
 
     &__overlay {
+        z-index: 9;
         display: none;
         position: fixed;
         left: 0;

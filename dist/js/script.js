@@ -4,18 +4,31 @@ const overlay = document.querySelector('.header__overlay'),
       menuClose = document.querySelector('.header__menu__close'),
       modalButtons = document.querySelectorAll('.open__modal'),
       modalWindow = document.querySelector('.modal'),
-      modalClose = document.querySelector('.modal__close')
+      modalClose = document.querySelector('.modal__close'),
+      modalForm = document.querySelector('#modal-form'),
+      modalChecked = document.querySelector('.modal__checked');
+      modalCheckedClose = document.querySelector('.modal__checked__close');
 
 modalButtons.forEach(function(item, i) {
-    modalButtons[i].addEventListener('click', function () {
+    modalButtons[i].addEventListener('click', function (event) {
         overlay.classList.add('active');
         modalWindow.classList.add('modal_active');
         modalClose.addEventListener('click', function() {
             overlay.classList.remove('active');
             modalWindow.classList.remove('modal_active');
+        });
+        modalForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            modalWindow.classList.remove('modal_active');
+            modalChecked.classList.add('modal__checked_active');
+            modalCheckedClose.addEventListener('click', function () {
+                overlay.classList.remove('active');
+                modalChecked.classList.remove('modal__checked_active');
+            })
         })
     })
 });
+
 
 hamburger.addEventListener('click', () => {
     overlay.classList.add('active');

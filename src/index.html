@@ -36,7 +36,6 @@
 </head>
 
 <body>
-
     <header class="header">
         <div class="container">
             <div class="header__top">
@@ -69,7 +68,7 @@
                         +7 (926) 423 01 00
                     </div>
                 </div>
-                <button class="button header__call">Перезвоните мне</button>
+                <button class="button header__call open__modal">Перезвоните мне</button>
             </div>
 
             <div class="header__main">
@@ -110,7 +109,7 @@
                     </div>
                 </div>
 
-                <button class="button header__calculation">Получить расчёт</button>  
+                <button class="button header__calculation open__modal">Получить расчёт</button>  
             </div>
 
             <div class="header__hamburger">
@@ -493,7 +492,7 @@
                         +7 (926) 423 01 00
                     </div>
                 </div>
-                <button class="button footer__call">Перезвоните мне</button>
+                <button class="button footer__call open__modal">Перезвоните мне</button>
             </div>
             <hr>
             <div class="footer__flex_bottom">
@@ -506,6 +505,28 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal">
+        <div class="modal__close">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal__title">ВВЕДИТЕ ВАШИ ДАННЫЕ</div>
+        <form id="modal-form" class="variants__form">
+            <div class="variants__input variants__input_first">
+                <input required name="name" type="text" placeholder="Ваше имя...">
+            </div>
+            <div class="variants__input variants__input_second">
+                <input required name="phone" type="tel" placeholder="Ваш номер телефона...">
+            </div>
+            <div class="variants__input variants__input_third">
+                <input required name="email" type="email" placeholder="Ваш e-mail...">
+            </div>
+            <div class="variants__button__wrapper">
+                <button form="variants-form" class="button variants__button">Отправить заявку</button>
+            </div>
+        </form>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/jquery.validate.min.js"></script>

@@ -5,7 +5,7 @@ const overlay = document.querySelector('.header__overlay'),
       modalButtons = document.querySelectorAll('.open__modal'),
       modalWindow = document.querySelector('.modal'),
       modalClose = document.querySelector('.modal__close'),
-      modalForm = document.querySelector('.modal__form'),
+      modalForm = document.querySelectorAll('.modal__form'),
       modalChecked = document.querySelector('.modal__checked'),
       variantsMore = document.querySelectorAll('.variants__flex-item__button'),
       variantsBack = document.querySelectorAll('.variants__flex-item__back'),
@@ -50,17 +50,19 @@ modalButtons.forEach(function(item, i) {
             overlay.classList.remove('active');
             modalWindow.classList.remove('modal_active');
         });
-        modalForm.addEventListener('submit', function (event) {
+        modalForm.forEach(function (item, i) {
+            modalForm[i].addEventListener('submit', function (event) {
             event.preventDefault();
-            if (modalForm.checkValidity()) {
-                modalWindow.classList.remove('modal_active');
-                modalChecked.classList.add('modal__checked_active');
-                modalCheckedClose.addEventListener('click', function () {
-                    overlay.classList.remove('active');
-                    modalChecked.classList.remove('modal__checked_active'); //comment
-                });
-            };
-        });
+            if (modalForm[i].checkValidity()) {
+                    modalWindow.classList.remove('modal_active');
+                    modalChecked.classList.add('modal__checked_active');
+                    modalCheckedClose.addEventListener('click', function () {
+                        overlay.classList.remove('active');
+                        modalChecked.classList.remove('modal__checked_active'); //comment
+                    });
+                };
+            });
+        })
     });
 });
 

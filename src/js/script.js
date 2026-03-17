@@ -5,9 +5,42 @@ const overlay = document.querySelector('.header__overlay'),
       modalButtons = document.querySelectorAll('.open__modal'),
       modalWindow = document.querySelector('.modal'),
       modalClose = document.querySelector('.modal__close'),
-      modalForm = document.querySelector('#modal-form'),
-      modalChecked = document.querySelector('.modal__checked');
+      modalForm = document.querySelector('.modal__form'),
+      modalChecked = document.querySelector('.modal__checked'),
+      variantsMore = document.querySelectorAll('.variants__flex-item__button'),
+      variantsBack = document.querySelectorAll('.variants__flex-item__back'),
+      variantsContent = document.querySelectorAll('.variants__flex-item__content__wrapper'),
+      variantsList = document.querySelectorAll('.variants__flex-item__list__wrapper'),
+      openChecked = document.querySelectorAll('.open__checked'),
       modalCheckedClose = document.querySelector('.modal__checked__close');
+
+openChecked.forEach(function (item, i) {
+    openChecked[i].addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (openChecked[i].checkValidity()) {
+            overlay.classList.add('active')
+            modalChecked.classList.add('modal__checked_active');
+            modalCheckedClose.addEventListener('click', function () {
+                overlay.classList.remove('active');
+                modalChecked.classList.remove('modal__checked_active'); //comment
+            });
+        };        
+    })
+})
+
+variantsMore.forEach(function (item, i) {
+    variantsMore[i].addEventListener('click', function () {
+        variantsContent[i].classList.remove('variants__flex-item__content__wrapper_active');
+        variantsList[i].classList.add('variants__flex-item__list__wrapper_active');
+    })
+})
+
+variantsBack.forEach(function (item, i) {
+    variantsBack[i].addEventListener('click', function () {
+        variantsList[i].classList.remove('variants__flex-item__list__wrapper_active');
+        variantsContent[i].classList.add('variants__flex-item__content__wrapper_active');
+    })
+})
 
 modalButtons.forEach(function(item, i) {
     modalButtons[i].addEventListener('click', function (event) {
@@ -30,6 +63,7 @@ modalButtons.forEach(function(item, i) {
         });
     });
 });
+
 
 
 hamburger.addEventListener('click', () => {
